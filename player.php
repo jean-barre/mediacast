@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<HEAD>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <META HTTP-EQUIV="Access-Control-Allow-Origin" CONTENT="http://localhost/js/playerScript.js">
+  <script type="text/javascript" src="../js/player.js"></script>
+  <script type="text/javascript" src="../js/youtubePlayer.js"></script>
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
+  <title>MediaCast Player</title>
+</HEAD>
+
+<body onload="bodyLoaded()">
+<h1>PLAYER</h1>
+
+<p class="player-p">
+
+<div id="no-media">
+	<font size=40>
+		NO MEDIA SELECTED
+	</font>
+</div>
+
+<div id="youtubePlayer"></div>
+
+<div id="radioFrame">
+  <img id="radioImage"/>
+  <audio id="radioPlayer" controls="controls"/>
+</div>
+</p>
+
+</BODY>
+</html>
