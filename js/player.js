@@ -1,7 +1,7 @@
 /****************************************
   NODE JS
 ****************************************/
-var ws = new WebSocket('ws://192.168.0.19:1337');
+var ws = new WebSocket('ws://'+ location.host +'/ws');
 
 function sendMessage(message_type, message_data) {
     var msg = {
