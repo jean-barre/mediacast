@@ -45,11 +45,12 @@ body, input, select {
 }
 
 #radioImage {
-	width: 80%;
+	max-width: 70vw;
+	max-height: 80vh;
 }
 
 #radioPlayer {
-	width: 80%;
+	width: 70vw;
 }
 
 input:focus,
