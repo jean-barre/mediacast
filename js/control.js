@@ -1,4 +1,10 @@
-var ws = new WebSocket('ws://'+ location.host +'/ws');
+/****************************************
+  NODE JS
+****************************************/
+// Apache version 2.4 and earlier
+//var ws = new WebSocket('ws://'+ location.host +'/ws');
+// Apache older versions
+var ws = new WebSocket('ws://192.168.0.19:1337');
 
 function sendMessage(message_type, message_data) {
     var msg = {

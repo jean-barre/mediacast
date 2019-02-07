@@ -1,7 +1,10 @@
 /****************************************
   NODE JS
 ****************************************/
-var ws = new WebSocket('ws://'+ location.host +'/ws');
+// Apache version 2.4 and earlier
+//var ws = new WebSocket('ws://'+ location.host +'/ws');
+// Apache older versions
+var ws = new WebSocket('ws://192.168.0.19:1337');
 
 function sendMessage(message_type, message_data) {
     var msg = {
@@ -13,8 +16,7 @@ function sendMessage(message_type, message_data) {
 }
 
 ws.onmessage = function (event) {
-        console.log(event.data);
-        var msg = JSON.parse(event.data);
+    var msg = JSON.parse(event.data);
     var type = msg.type;
     var data = msg.data;
 
@@ -56,7 +58,6 @@ function playYouTubeVideo(newVideoId) {
   youtubeFrame.style.display = "inline";
   radioFrame.style.display = "none";
   radioPlayer.pause();
-  console.log(newVideoId)
   youtubePlayer.stopVideo();
   youtubePlayer.loadVideoById(newVideoId, 0, "large")
   youtubePlayer.playVideo();
