@@ -46,39 +46,39 @@ var radioImage
 var radioPlayer
 
 function bodyLoaded() {
-	noMediaText = document.getElementById("no-media");
-	youtubeFrame = document.getElementById("youtubePlayer");
-  radioFrame = document.getElementById("radioFrame");
-  radioImage = document.getElementById("radioImage");
-	radioPlayer = document.getElementById("radioPlayer");
+    noMediaText = document.getElementById("no-media");
+    youtubeFrame = document.getElementById("youtubePlayer");
+    radioFrame = document.getElementById("radioFrame");
+    radioImage = document.getElementById("radioImage");
+    radioPlayer = document.getElementById("radioPlayer");
 }
 
 function playYouTubeVideo(newVideoId) {
-  noMediaText.style.display = "none";
-  youtubeFrame.style.display = "inline";
-  radioFrame.style.display = "none";
-  radioPlayer.pause();
-  youtubePlayer.stopVideo();
-  youtubePlayer.loadVideoById(newVideoId, 0, "large")
-  youtubePlayer.playVideo();
+    noMediaText.style.display = "none";
+    youtubeFrame.style.display = "inline";
+    radioFrame.style.display = "none";
+    radioPlayer.pause();
+    youtubePlayer.stopVideo();
+    youtubePlayer.loadVideoById(newVideoId, 0, "large")
+    youtubePlayer.playVideo();
 }
 
 function playLaRadioSympa() {
-  noMediaText.style.display = "none";
-  youtubeFrame.style.display = "none";
-  youtubePlayer.stopVideo();
-  radioFrame.style.display = "inline";
-  radioImage.src = "images/laradiosympa.jpg"
-  radioPlayer.src = "http://radio2.pro-fhi.net:9095/index.html/stream;";
-  radioPlayer.play();
+    noMediaText.style.display = "none";
+    youtubeFrame.style.display = "none";
+    youtubePlayer.stopVideo();
+    radioFrame.style.display = "inline";
+    radioImage.src = "images/laradiosympa.jpg"
+    radioPlayer.src = "http://radio2.pro-fhi.net:9095/index.html/stream;";
+    radioPlayer.play();
 }
 
 function playRadioMeuh() {
-  noMediaText.style.display = "none";
-  youtubeFrame.style.display = "none";
-  youtubePlayer.stopVideo();
-  radioFrame.style.display = "inline";
-  radioImage.src = "images/radiomeuh.png"
-  radioPlayer.src = "http://radiomeuh.ice.infomaniak.ch/radiomeuh-128.mp3";
-  radioPlayer.play();
+    noMediaText.style.display = "none";
+    youtubeFrame.style.display = "none";
+    youtubePlayer.stopVideo();
+    radioFrame.style.display = "inline";
+    radioImage.src = "images/radiomeuh.png"
+    radioPlayer.src = "http://radiomeuh.ice.infomaniak.ch/radiomeuh-128.mp3";
+    radioPlayer.play();
 }
