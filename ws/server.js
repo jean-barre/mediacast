@@ -27,20 +27,25 @@ wsServer.on('request', function(request) {
 
     connection.on('message', function(message) {
         if (message.type === 'utf8') {
-            var msg = JSON.parse(message.utf8Data);
-            var type = msg.type;
-            var data = msg.data;
+            try {
+                var msg = JSON.parse(message.utf8Data);
+                var type = msg.type;
+                var data = msg.data;
 
-            if (type == "id") {
-                if (data == "player") {
-                    players.push(connection)
+                if (type == "id") {
+                    if (data == "player") {
+                        players.push(connection)
+                    } else {
+                        controls.push(connection)
+                    }
                 } else {
-                    controls.push(connection)
+                    for(var i = 0; i < players.length; i++) {
+                        players[i].sendUTF(message.utf8Data);
+                    }
                 }
-            } else {
-                for(var i = 0; i < players.length; i++) {
-                    players[i].sendUTF(message.utf8Data);
-                }
+            } catch (e) {
+                console.log(e.name)
+                console.log(e.message)
             }
         }
     });
