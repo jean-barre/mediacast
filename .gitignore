@@ -3,3 +3,4 @@ node_modules/
 package.json
 package-lock.json
 qt-player/build-*
+qt-controller/build-*
